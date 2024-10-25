@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Editable Resume Builder</h1>
+    <form id="resume-form">
+        <div class="section">
+            <h2>Personal Information</h2>
+            <input type="text" id="name" placeholder="Name" required />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="file" id="profile-pic" accept="image/*" required />
+        </div>
+
+        <div class="section">
+            <h2>Education</h2>
+            <input type="text" id="education" placeholder="Highest Degree" required />
+        </div>
+
+        <div class="section">
+            <h2>Work Experience</h2>
+            <input type="text" id="work" placeholder="Recent Job Title" required />
+        </div>
+
+        <div class="section">
+            <h2>Skills</h2>
+            <input type="text" id="skills" placeholder="Key Skills" required />
+        </div>
+
+        <button type="submit">Generate Resume</button>
+    </form>
+
+    <div id="resume-output" class="resume-output" style="display: none;">
+        <h1 id="output-name" contenteditable="true">Your Name</h1>
+        <img id="output-image" src="" alt="Profile Picture" />
+        <p id="output-email" contenteditable="true">Your Email</p>
+        
+        <h2>Education</h2>
+        <p id="output-education" contenteditable="true">Your Highest Degree</p>
+        
+        <h2>Work Experience</h2>
+        <p id="output-work" contenteditable="true">Your Recent Job Title</p>
+        
+        <h2>Skills</h2>
+        <p id="output-skills" contenteditable="true">Your Key Skills</p>
+    </div>
+
+    <script src="app.js"></script> <!-- Link to your compiled JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
